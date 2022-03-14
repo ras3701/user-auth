@@ -25,7 +25,8 @@ def loginpage(request):
                 messages.info(request,"You are logged in as {username}")
                 return redirect("main:homepage")
         else:
-            messages.error(request, f"Please check your credentials")
+            messages.error(request, f"Incorrect credentials! Please try again.")
+	    return redirect("main:homepage")
     else:
         form = AuthenticationForm
         return render(request=request,
