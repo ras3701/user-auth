@@ -27,11 +27,10 @@ def loginpage(request):
         else:
             messages.error(request, f"Incorrect credentials! Please try again.")
 	        return redirect("main:homepage")
-    else:
-        form = AuthenticationForm
-        return render(request=request,
-                    template_name="login-page.html",
-                    context = {"form": form})
+    form = AuthenticationForm
+    return render(request=request,
+                  template_name="login-page.html",
+                  context = {"form": form})
 
 
 def signuppage(request):
