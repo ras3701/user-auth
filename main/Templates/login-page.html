@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% include 'customizeMessages.html' %}
+
+        {% block content %}
+      
+        {% endblock %} 
+        <h1>
+            Welcome to the Login Page
+        </h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <br>
+            Don't have an account? <a href="/signup-page" target="blank"><strong>Sign Up</strong></a>!
+            <br>
+            <br>
+            <button style="background-color: white; color: black" type="Submit"> Login</button>
+            
+        </form>
+    </body>
+</html>
+

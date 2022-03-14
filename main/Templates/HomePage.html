@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href = "stylesheet.css">
+        <title>
+            RV Park booking
+        </title>
+    </head>
+    <body>
+        <div class="nav">
+            {% if user.is_authenticated %}
+                <a class = "navbar" >{{user.username}}</a>
+                <a class = "navbar" href = '/logout-page'>Logout</a>
+            {% else %}
+                <a class = "navbar" href = "/login-page">LOGIN</a>
+                <a class = "navbar" href = "/signup-page">SIGN UP</a>
+            {% endif %}
+        </div>
+        <h1>
+            Welcome to RV Park booking platform
+        </h1>
+        <p>
+            This is the first iteration home page for the RV Park booking system, please check the login/sign up/logout features on the website.
+            <br>
+            This is a user story completion. CSS styling will be added later as per the demand of the client.
+        </p>
+    </body>
+</html>
