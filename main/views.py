@@ -26,7 +26,7 @@ def loginpage(request):
                 return redirect("main:homepage")
         else:
             messages.error(request, f"Incorrect credentials! Please try again.")
-	        return redirect("main:homepage")
+            return redirect("main:homepage")
     form = AuthenticationForm
     return render(request=request,
                   template_name="login-page.html",
