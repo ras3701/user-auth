@@ -54,10 +54,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'RVPark.urls'
 
+CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TEMPLATE_DIR = os.path.join(CORE_DIR, "main/Templates")
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,10 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-TEMPLATE_DIRS = (
-    'main/Templates/',
-)
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
