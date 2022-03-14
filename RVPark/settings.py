@@ -102,6 +102,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+TEMPLATE_DIRS = (
+    'main/Templates/',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
